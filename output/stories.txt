@@ -124,3 +124,6 @@ Story: The grass is green is shown in a natural setting. The scene looks calm an
 Caption: the horse is brown
 Story: The horse is brown is shown in a natural setting. The scene looks calm and peaceful. It captures a simple moment.
 --------------------------------------------------
+Caption: a little girl on a surf board rides a wave
+Story: A little girl on a surf board rides a wave is shown in a natural setting. The scene looks calm and peaceful. It captures a simple moment.
+--------------------------------------------------

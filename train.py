@@ -30,7 +30,7 @@ class ImageCaptionDataset(Dataset):
                 # Skip missing images
                 if os.path.exists(img_path):
                     self.data.append((img, caption))
-
+        
         print(f"✅ Loaded {len(self.data)} valid samples")
 
     def __len__(self):
@@ -68,7 +68,7 @@ dataset = ImageCaptionDataset("data/images", "data/cleaned_captions.txt")
 
 loader = DataLoader(
     dataset,
-    batch_size=8,        # increase if RAM allows
+    batch_size=4,        # increase if RAM allows
     shuffle=True
 )
 

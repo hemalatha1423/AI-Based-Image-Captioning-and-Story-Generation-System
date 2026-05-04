@@ -1,14 +1,20 @@
 import matplotlib.pyplot as plt
+import re
 
-epochs = [1, 2, 3]
-loss = [6.0, 3.8, 2.8]   # realistic final loss per epoch
+loss_values = []
 
-plt.figure()
-plt.plot(epochs, loss, marker='o')
-plt.xlabel("Epoch")
+# Read log file
+with open("training_log.txt", "r") as f:
+    for line in f:
+        match = re.search(r"Loss:\s([0-9.]+)", line)
+        if match:
+            loss_values.append(float(match.group(1)))
+
+# Plot
+plt.plot(loss_values)
+plt.xlabel("Steps")
 plt.ylabel("Loss")
-plt.title("Training Loss vs Epoch")
+plt.title("Training Loss Graph")
 
-plt.grid()
 plt.savefig("loss_graph.png")
 plt.show()
